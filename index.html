@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #353538;
+        color: aliceblue;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .content-center {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20%;
+      }
+      input,
+      search {
+        border: 0px;
+        border-radius: 10px;
+        height: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background-color: #59595e;
+      }
+      input[type="search"]::placeholder {
+        color: white;
+      }
+      .header-text {
+        font-size: 50px;
+        color: gold;
+      }
+      .pl-1 {
+        padding-left: 30%;
+      }
+      .pt-1 {
+        padding-top: 10%;
+      }
+      .bg-1 {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXvMTLrTSyPiyctWXurf8K-x2KvSK-zerXFg&s&fbclid=IwZXh0bgNhZW0CMTAAAR34exW0JoK32PKiVNRYBoxopzbfz1zQ7CcIpXWCic0tZfBLNbqDDDF8PCk_aem_AS_ksZ8L09lFRLXqm_YEPdpzvqYRZYogzvokA3QyVMlVelZb9uAN8KURT1Y0gxiOkDAOpSDduwksCAUVL_e-kSXg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+      }
+      .btn-1 {
+        border: 1px solid gold;
+        border-radius: 5px;
+        background-color: #00000000;
+        color: gold;
+        padding: 5px 20px;
+      }
+      .btn-1:hover {
+        border: 1px solid white;
+        background-color: rgba(255, 217, 0, 0);
+        padding: 10px 25px;
+      }
+
+      .btn-1:focus {
+        color: white;
+        border: 3px solid rgba(0, 0, 0, 0.281);
+        background-color: gold;
+      }
+      .ab {
+        margin: 80px 0px 0px 40px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .pa {
+        margin: 0px 0px 0px 40px;
+      }
+      .ff {
+        color: rgba(255, 217, 0, 0.363);
+      }
+      .my {
+        margin-top: 10%;
+        text-align: center;
+      }
+      .box-skills {
+            background-color: #59595e;
+            width: 100px;
+            height: 100px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .grid-container2 {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- box1 -->
+    <div class="d-flex">
+      <img src="" alt="logo" />
+      <div class="content-center">
+        <p>About</p>
+        <p>Portfolio</p>
+        <p>Contact</p>
+      </div>
+      <!-- search -->
+      <input type="search" name="data" id="data" placeholder="Search" />
+    </div>
+
+    <!-- box-2 -->
+    <div class="bg-1">
+      <div class="pl-1 pt-1">
+        <p>I'M</p>
+        <span class="header-text">Ivan Dan</span>
+        <p>Python Developer & ERPNext</p>
+        <p>consultant</p>
+        <button class="btn-1">Contact Me</button>
+      </div>
+    </div>
+
+    <!-- box-3 -->
+    <div class="ab">
+      <h1>About</h1>
+    </div>
+
+    <!-- box-4 -->
+    <div class="pa">
+      <p>
+        Loremipsum dolor sit amet consectetur adipisicing elit. Rem distinctio
+        quasi nostrum dignissimos nisi sequi.<span class="ff">
+          Suscipit nam possimus officiis deserunt consectetur</span
+        >
+        aliquid,totam consequatur perspiciatis cum laborum delectus tempore
+        harum ad error! Reiciendis animi porro quisquam voluptatibus est nobis
+        esse nam hic! Tempore vel ut inventore odit eveniet asperiores cumque.
+      </p>
+    </div>
+    <!-- Myskill -->
+    <div class="my">
+      <h1>My Skills</h1>
+
+      <p id="mySkills1" class="grid-container1"></p>
+      <p id="mySkills2" class="grid-container2"></p>
+      <p id="mySkills3" class="grid-container2"></p>
+    </div>
+
+    <!-- Javascript -->
+     <script>
+
+        // skill box 1
+        const skills = ["Python","Flutter","Ubuntu","Git Source","ERP","Monogo","Html&CSS","Js"]
+      
+        let text1 ="";
+
+        for (let i = 0; i < skills.length; i++){
+            text1 += `<div class="box-skills">` + skills[i] + `</div>`
+        }
+        
+        document.getElementById("mySkills1").innerHTML = text1
+        
+        // skill box 2
+        const sk = ["Fr","Net","Fl"]
+      
+        let text2 ="";
+
+        for (let i = 0; i < sk.length; i++){
+            text2 += `<div class="box-skills">` + sk[i] + `</div>`
+        }
+        
+        document.getElementById("mySkills2").innerHTML = text2
+        
+        
+        // skill box 3
+        const s = ["Sql","Aws"]
+      
+        let text3 ="";
+
+        for (let i = 0; i < s.length; i++){
+            text3 += `<div class="box-skills">` + s[i] + `</div>`
+        }
+        
+        document.getElementById("mySkills3").innerHTML = text3
+
+        
+     </script>
+  </body>
+</html>
